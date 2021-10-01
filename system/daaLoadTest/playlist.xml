@@ -118,7 +118,7 @@
 		<variations>
 			<variation>-Xgcpolicy:gencon -Xgc:concurrentScavenge</variation>
 		</variations>
-		<command>$(SYSTEMTEST_CMD_TEMPLATE) -test-args=$(Q)workload=daa2,timeLimit=5m$(Q) -test=DaaLoadTest; \
+		<command>$(SYSTEMTEST_CMD_TEMPLATE) -java-args-setup="-verbose:class" -test-args=$(Q)workload=daa2,timeLimit=5m$(Q) -test=DaaLoadTest; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>sanity</level>
