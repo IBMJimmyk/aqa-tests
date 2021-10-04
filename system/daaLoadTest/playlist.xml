@@ -118,7 +118,7 @@
 		<variations>
 			<variation>-Xgcpolicy:gencon -Xgc:concurrentScavenge</variation>
 		</variations>
-		<command>export OPENJ9_JAVA_OPTIONS="-Xjit:{*OrderedProperties.getProperty*}(tracefull,log=getProperty.log),dontinline={*OrderedProperties.getProperty*},verbose,vlog=getProperty.vlog"; $(SYSTEMTEST_CMD_TEMPLATE) -test-args=$(Q)workload=daa2,timeLimit=5m$(Q) -test=DaaLoadTest; \
+		<command>export OPENJ9_JAVA_OPTIONS="-Xjit:{*OrderedProperties.getProperty*}(count=0,tracefull,log=getProperty.log),dontinline={*OrderedProperties.getProperty*},verbose,vlog=getProperty.vlog"; $(SYSTEMTEST_CMD_TEMPLATE) -test-args=$(Q)workload=daa2,timeLimit=5m$(Q) -test=DaaLoadTest; \
 	$(TEST_STATUS)</command>
 		<levels>
 			<level>sanity</level>
